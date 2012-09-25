@@ -54,12 +54,66 @@
 <li>IE9 +</li>
 <li>Google Chrome: 支持Windows/Mac OS, Linux需要安装h.264解码器(linx未测试)</li>
 </ul><h3>安装</h3>
-
-<hr><pre><code>&lt;link rel="stylesheet" href="css/html5video.css" type="text/css" media="screen" charset="utf-8"&gt;
+<hr>
+<p>
+	1.安装所需lib包
+</p>
+<pre><code>
+&lt;link rel="stylesheet" href="css/html5video.css" type="text/css" media="screen" charset="utf-8"&gt;
 &lt;script src="js/jquery-1.8.1.min.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;script src="js/underscore.js" type="text/javascript"&gt;&lt;/script&gt; 
+&lt;script src="js/dy-video-html5.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
 </code></pre>
+
+<p>
+	2. 将代码模板放到body中
+</p>
+
+<pre><code>
+&lt;script type=&quot;text/template&quot; id=&quot;dy-video-tmpl&quot;&gt;
+		&lt;div class=&quot;video-wrapper&quot;&gt;
+			&lt;video width=&quot;720&quot; height=&quot;400&quot; 
+				src=&quot;&lt;%= videoSrc%&gt;&quot; 
+				onfocus=&quot;this.blur();&quot; 
+				controls 
+				&lt;%= autoplay ? &quot;autoplay&quot; : &quot;&quot; %&gt; 
+				&lt;%= posterSrc == undefined ? &quot;&quot; :
+						&quot;poster=&quot; + posterSrc %&gt;
+			&gt;
+
+			&lt;/video&gt;
+			&lt;div class=&quot;video-controls&quot;&gt;
+				&lt;a href=&quot;#&quot; onfocus=&quot;this.blur();&quot; class=&quot;button btn-trim-in&quot;&gt;
+				&lt;/a&gt;
+				&lt;a href=&quot;#&quot; onfocus=&quot;this.blur();&quot; class='button btn-trim-out'&gt;
+				&lt;/a&gt;
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;canvas-wrapper&quot; &gt;
+			&lt;canvas width=&quot;710&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;
+			&lt;div class=&quot;trim-times&quot;&gt;
+				&lt;table border=&quot;0&quot; cellpadding='0' cellspacing='0'&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td&gt;
+								&lt;div class=&quot;trim-time-in&quot; trimTime='none'&gt;
+								&lt;/div&gt;
+							&lt;/td&gt;
+							&lt;td&gt;
+								&lt;div class=&quot;trim-time-out&quot; trimTime='none'&gt;
+								&lt;/div&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+&lt;/script&gt;
+</code></pre>
+
 
 <h3>快速使用</h3>
 
