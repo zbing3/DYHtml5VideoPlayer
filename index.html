@@ -4,50 +4,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<title>Video</title>	
 	<link rel="stylesheet" href="css/html5video.css" type="text/css" media="screen" charset="utf-8">
-	<style type="text/css" media="screen">
-		body {
-			background-color: #efefef;
-		}
-		#main {
-			width: 960px;
-			margin: 20px auto;
-		}
-		#dy-player {
-			float:left;
-		}
-		#play-list {
-			float:left;
-			width:220px;
-			list-style: none;
-			margin: 0px;
-			padding: 0px;
-			border: solid 2px #444;
-		}
-		#play-list li {
-			list-style:none;
-			margin:0;
-			padding:0;
-			border-bottom: solid 2px #666;
-		}
-		#play-list li a {
-			font-weight: bold;
-			font-size: 13px;
-			line-height: 26px;
-			display: block;
-			text-align: center;
-			color: #222;
-			text-decoration: none;
-		}
-		#play-list li a:hover {
-			color: #fff;
-			background-color: #3b5888;
-		}
-
-		a.actived {
-			background-color: yellow;
-		}
-
-	</style>
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" charset="utf-8">
 	<script src="js/jquery-1.8.1.min.js" type="text/javascript" charset="utf-8"></script>
 
 	<script src="js/underscore.js" type="text/javascript"></script>
@@ -60,6 +17,9 @@
 				videoSrc: 'http://192.168.1.205/~lvjian/video/death.mp4'
 			});
 			v.render();
+
+			v.setTrimIn(1000);
+			v.setTrimOut(1500);
 
 			v.trimin(function(e, data) {
 				console.log('get trimin');

@@ -191,6 +191,9 @@ DYVideo.prototype.render = function() {
 		var y = e.offsetY;
 
 		_.each(_this.regions, function(rect, key) {
+			if(rect == false) {
+				return;
+			}
 			if(rect.containPoint({x:x, y:y})) {
 				playFrom(rect.time);
 			}
@@ -235,3 +238,22 @@ DYVideo.prototype.trimin = function(func) {
 DYVideo.prototype.trimout = function(func) {
 	this.$el.bind('trimout', func);
 };
+
+
+DYVideo.prototype.setTrimIn = function(frame) {
+	var second = frame / this.getFps();
+	var str = second2TimeString(second);
+
+	this.$trimInDisplay.attr('trimTime', second).html(str);
+};
+
+DYVideo.prototype.setTrimOut = function(frame) {
+	var second = frame / this.getFps();
+	var str = second2TimeString(second);
+	
+	this.$trimOutDisplay.attr('trimTime', second).html(str);
+};
+
+
+
+
