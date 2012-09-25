@@ -72,45 +72,38 @@
 
 <pre><code>
 &lt;script type=&quot;text/template&quot; id=&quot;dy-video-tmpl&quot;&gt;
-	&lt;div class=&quot;video-wrapper&quot;&gt;
-		&lt;video width=&quot;720&quot; height=&quot;400&quot; 
-			src=&quot;&lt;%= videoSrc%&gt;&quot; 
-			onfocus=&quot;this.blur();&quot; 
-			controls 
-			&lt;%= autoplay ? &quot;autoplay&quot; : &quot;&quot; %&gt; 
-			&lt;%= posterSrc == undefined ? &quot;&quot; :
-					&quot;poster=&quot; + posterSrc %&gt;
-		&gt;
-
-		&lt;/video&gt;
-		&lt;div class=&quot;video-controls&quot;&gt;
-			&lt;a href=&quot;#&quot; onfocus=&quot;this.blur();&quot; class=&quot;button btn-trim-in&quot;&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; onfocus=&quot;this.blur();&quot; class='button btn-trim-out'&gt;
-			&lt;/a&gt;
-
-		&lt;/div&gt;
-	&lt;/div&gt;
-
-	&lt;div class=&quot;canvas-wrapper&quot; &gt;
-		&lt;canvas width=&quot;710&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;
-		&lt;div class=&quot;trim-times&quot;&gt;
-			&lt;table border=&quot;0&quot; cellpadding='0' cellspacing='0'&gt;
-				&lt;tbody&gt;
-					&lt;tr&gt;
-						&lt;td&gt;
-							&lt;div class=&quot;trim-time-in&quot; trimTime='none'&gt;
-							&lt;/div&gt;
-						&lt;/td&gt;
-						&lt;td&gt;
-							&lt;div class=&quot;trim-time-out&quot; trimTime='none'&gt;
-							&lt;/div&gt;
-						&lt;/td&gt;
-					&lt;/tr&gt;
-				&lt;/tbody&gt;
-			&lt;/table&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
+    &lt;div class=&quot;video-wrapper&quot;&gt;
+        &lt;video width=&quot;720&quot; height=&quot;400&quot; 
+            src=&quot;&lt;%= videoSrc%&gt;&quot; 
+            onfocus=&quot;this.blur();&quot; 
+            controls 
+            &lt;%= autoplay ? &quot;autoplay&quot; : &quot;&quot; %&gt; 
+            &lt;%= posterSrc == undefined ? &quot;&quot; :
+            &quot;poster=&quot; + posterSrc %&gt;
+        &gt;
+        &lt;/video&gt;
+        &lt;div class=&quot;video-controls&quot;&gt;
+            &lt;a href=&quot;#&quot; onfocus=&quot;this.blur();&quot; class=&quot;button btn-trim-in&quot;&gt; &lt;/a&gt;
+            &lt;a href=&quot;#&quot; onfocus=&quot;this.blur();&quot; class='button btn-trim-out'&gt; &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;canvas-wrapper&quot;&gt;
+        &lt;canvas width=&quot;710&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;		
+        &lt;div class=&quot;trim-times&quot;&gt;		
+            &lt;table border=&quot;0&quot; cellpadding='0' cellspacing='0'&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;div class=&quot;trim-time-in&quot; trimTime='none'&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;div class=&quot;trim-time-out&quot; trimTime='none'&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/script&gt;
 </code></pre>
 
