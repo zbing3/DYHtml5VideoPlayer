@@ -18,11 +18,58 @@ HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打
 
 ###安装
 
+1.在网页中加载lib包:	
+
 	<link rel="stylesheet" href="css/html5video.css" type="text/css" media="screen" charset="utf-8">
 	<script src="js/jquery-1.8.1.min.js" type="text/javascript" charset="utf-8"></script>
-
 	<script src="js/underscore.js" type="text/javascript"></script>	
+	
+	<script src="js/dy-video-html5.js" type="text/javascript" charset="utf-8"></script>
 
+2.将模板代码复制到body中:
+
+	<script type="text/template" id="dy-video-tmpl">
+		<div class="video-wrapper">
+			<video width="720" height="400" 
+				src="<%= videoSrc%>" 
+				onfocus="this.blur();" 
+				controls 
+				<%= autoplay ? "autoplay" : "" %> 
+				<%= posterSrc == undefined ? "" :
+						"poster=" + posterSrc %>
+			>
+
+			</video>
+			<div class="video-controls">
+				<a href="#" onfocus="this.blur();" class="button btn-trim-in">
+				</a>
+				<a href="#" onfocus="this.blur();" class='button btn-trim-out'>
+				</a>
+
+			</div>
+		</div>
+
+		<div class="canvas-wrapper" >
+			<canvas width="710" height="100"></canvas>
+			<div class="trim-times">
+				<table border="0" cellpadding='0' cellspacing='0'>
+					<tbody>
+						<tr>
+							<td>
+								<div class="trim-time-in" trimTime='none'>
+								</div>
+							</td>
+							<td>
+								<div class="trim-time-out" trimTime='none'>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</script>
+  
 
 ###快速使用
 
