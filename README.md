@@ -1,6 +1,6 @@
 ##HTML5视频打点播放
 
-[Go to Project Home](https://github.com/lvjian700/DYHtml5VideoPlayer)	
+[Go to Project Home](http://lvjian700.github.com/DYHtml5VideoPlayer)	
 [See Demo](http://lvjian700.github.com/DYHtml5VideoPlayer/demo.html)	
 
 ###说明
