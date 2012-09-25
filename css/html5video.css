@@ -1,0 +1,88 @@
+
+.clear {
+	clear: both;
+	line-height: 0%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.dy-video {
+	width: 720px;
+	background-color:#333;
+}
+.dy-video .video-wrapper {
+	background-color:#000;
+}
+
+a.button {
+	font-size: 12px;
+	line-height: 22px;
+}	
+
+.video-wrapper .video-controls {
+	padding: 0px 5px;
+	background-color:#000;
+}
+
+.canvas-wrapper .trim-times {
+	height: 22px;
+}
+
+.canvas-wrapper .trim-times table {
+	maring: 0px;
+	padding: 0px;
+	border: none; 
+	border-collapse: collapse;
+}
+
+.canvas-wrapper .trim-times table tbody tr td {
+	maring: 0px;
+	padding: 0px;
+	width: 180px;
+}
+
+.trim-time-in, .trim-time-out {
+	text-align: center;
+	color: #fff;
+	background-color: #333;
+	line-height: 18px;
+	padding: 0px 10px;
+	margin: 0 10px;
+}
+
+.trim-time-in:hover, .trim-time-out:hover {
+	cursor: pointer;
+}
+
+
+.canvas-wrapper {
+	width: 720px;
+	padding-bottom: 5px;
+}
+
+a.button { 
+	display: inline-block;
+	background-color: #000;
+	width: 46px;
+	height: 46px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+a.button:hover {
+	background-position: -46px 0px;
+}
+
+a.button:active {
+	background-position: -92px 0px;
+}
+
+.btn-trim-in {
+	background-image: url("../images/button_in.png");
+}
+
+.btn-trim-out {
+	background-image: url("../images/button_out.png");
+}
