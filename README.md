@@ -1,7 +1,9 @@
 ##HTML5视频打点播放
 
+[Go to Project Home](https://github.com/lvjian700/DYHtml5VideoPlayer)	
+[See Demo](http://lvjian700.github.com/DYHtml5VideoPlayer/demo.html)	
+
 ###说明
----
 
 HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打点功能。该功能被用在中科大洋公司的项目， 用来切分视频。	
 
@@ -13,12 +15,8 @@ HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打
 * Google Chrome: 支持Windows/Mac OS, Linux需要安装h.264解码器(linx未测试)
 
 
-[Go to Project Home](https://github.com/lvjian700/DYHtml5VideoPlayer)	
-[See Demo](http://lvjian700.github.com/DYHtml5VideoPlayer/demo.html)	
-
 
 ###安装
----
 
 	<link rel="stylesheet" href="css/html5video.css" type="text/css" media="screen" charset="utf-8">
 	<script src="js/jquery-1.8.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -27,7 +25,6 @@ HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打
 
 
 ###快速使用
----
 
 快速初始化视频播放器，并制定初始化视频地址。	
 
@@ -43,7 +40,6 @@ HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打
 
 
 ###DYVideo初始化参数说明
----
 
 	{
 		el: '', //(必须) 只定在哪里创建组建， 支持jQuery选择器
@@ -54,7 +50,6 @@ HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打
 	}
 
 ###监听视频打点事件
----
 
 如何监听事件:	
 
@@ -82,7 +77,6 @@ data数据结构:
 	}
 
 ###DYVideo属性说明
----
 
 * __getEl() : String__ : 获取初始化时传入的el参数
 * __getCurrentSrc() : String__ : 获取当前视频的路径
@@ -93,13 +87,11 @@ data数据结构:
 * __setTrimOut(frame:numner)__ : 设置出点， 参数为帧数
 
 ###DYVideo特殊属性
----
 
 * __video__ : 当前视频播放器的dom对象
 * __canvas__ : 当前缩略图的画布dom对象
 
 ###DYVideo方法
----
 
 * __render()__ : 渲染组建， 在创建DYVideo后需要调用。
 * __play(url:string)__ : 播放视频。 
