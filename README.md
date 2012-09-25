@@ -13,6 +13,10 @@ HTML5视频打点播放器，封装了对html5 video的操作， 支持视频打
 * Google Chrome: 支持Windows/Mac OS, Linux需要安装h.264解码器(linx未测试)
 
 
+(Go to Project Home)[https://github.com/lvjian700/DYHtml5VideoPlayer]	
+(See Demo)[http://lvjian700.github.com/DYHtml5VideoPlayer/demo.html]	
+
+
 ###安装
 ---
 
