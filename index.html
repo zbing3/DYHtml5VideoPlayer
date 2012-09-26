@@ -255,10 +255,14 @@ v.trimout(function(e, data) {
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-
+			var videoUrl = 'http://media.w3.org/2010/05/sintel/trailer.mp4';
+			if($.browser.mozilla) {
+				videoUrl = 'http://media.w3.org/2010/05/sintel/trailer.ogv';
+			}
+			
 			var v = new DYVideo({
 				el: '#dy-player',
-				videoSrc: 'http://media.w3.org/2010/05/sintel/trailer.mp4'
+				videoSrc: videoUrl
 			});
 			v.render();
 		});
